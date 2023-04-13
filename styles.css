@@ -4,9 +4,15 @@
 
 body {
     background-color: #fffbfa;
-    color: #333;
+    color: rgb(39, 39, 39);
     transition: all 2s;
-    font-family: 'Rubik Pixels', cursive;
+    /* font-family: "manofa", sans-serif;
+font-weight: 400;
+font-style: normal; */
+    font-family: "gambado-sans-forte", sans-serif;
+font-weight: 700;
+font-style: normal;
+ 
 }
 
 body.switch {
@@ -53,13 +59,17 @@ main {
 
 main section {
     width: 25%;
-    border: 5px #e3e899 outset;
+    border: 8px #f2fa8e outset;
     margin: 0 .25em;
     padding: 1em;
+    background-color: #e2eb61;
 }
 
 main section.switch {
+    border: 7px ridge white;
     border-color: #5b6553;
+    background-color: #242929;
+    /* background-color: #4b5445; */
 }
 
 a {
@@ -81,12 +91,11 @@ section a {
     line-height: 1.1em;
     display: inline-block;
     padding: .5em;
-    color: #d7e022;
+    color: #5b6553;
 }
 
 section a:hover {
-    background-color: #d7e022;
-    color: #333;
+    color: #00A6A6;
 }
 
 section.switch a {
@@ -101,7 +110,7 @@ section.switch a:hover {
 
 button {
     position: absolute;
-    top: 20px;
+    top: 27px;
     right: 20px;
     padding: 12px;
     background-color: #e73f51;
@@ -149,11 +158,19 @@ button.switch:hover {
     height: 100%;
 }
 
-/* header h1 {
-    color: #bfedaa;
+h1 {
+    margin: 0;
+    font-size: 38px;
 }
 
-header h1.switch {
-    background-color: rgb(235, 235, 235);
+header h2 {
+    color: #FE4A49;
+    margin: 12px 0 20px 0;
+}
+
+header h2.switch {
+    color: #839872;
+    /* background-color: rgb(235, 235, 235);
     color: #333;
-} */
+    width: 550px; */
+}
