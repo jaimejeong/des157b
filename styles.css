@@ -6,18 +6,14 @@ body {
     background-color: #fffbfa;
     color: rgb(39, 39, 39);
     transition: all 2s;
-    /* font-family: "manofa", sans-serif;
-font-weight: 400;
-font-style: normal; */
     font-family: "gambado-sans-forte", sans-serif;
-font-weight: 700;
-font-style: normal;
+    font-weight: 700;
+    font-style: normal;
  
 }
 
 body.switch {
     background-color: #242929;
-    /* background-color: #f0eae4; */
     color: #f0eae4;
 }
 
@@ -46,8 +42,6 @@ header {
 }
 
 #banner.switch {
-    /* background-color: ##5b6553; */
-    /* color: #767972; */
     transition: all 2s;
 }
 
@@ -69,7 +63,6 @@ main section.switch {
     border: 7px ridge white;
     border-color: #5b6553;
     background-color: #242929;
-    /* background-color: #4b5445; */
 }
 
 a {
@@ -100,7 +93,6 @@ section a:hover {
 
 section.switch a {
     color: #767972;
-    /* color: #5b6553 */
 }
 
 section.switch a:hover {
@@ -170,7 +162,4 @@ header h2 {
 
 header h2.switch {
     color: #839872;
-    /* background-color: rgb(235, 235, 235);
-    color: #333;
-    width: 550px; */
 }
