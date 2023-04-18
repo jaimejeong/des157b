@@ -1,0 +1,94 @@
+body {
+    background-color: #fffbfa;
+}
+
+#container {
+    margin: auto;
+    width: 800px;
+    position: relative;
+    margin-top: 40px;
+}
+
+main {
+    display: flex;
+    background-color: #fff5c2;
+    align-items: center;
+}
+
+img {
+    width: 400px;
+}
+
+h1 {
+    font-family: "gambado-sans-forte", sans-serif;
+    font-size: 36px;
+}   
+
+/* color of h1 letters */
+#first {
+    color: #fcbe02;
+}
+
+#second {
+    color: #df5087;
+}
+
+#third {
+    color: #51c8d2;
+}
+
+#fourth {
+    color: #f55435;
+}
+
+#fifth {
+    color: #4dbc92;
+}
+
+#sixth {
+    color: #f76663;
+}
+
+#seventh {
+    color: #f4b8c5;
+}
+
+#eighth {
+    color: #4fa3a4;
+}
+
+#ninth {
+    color: #bfedaa;
+}
+
+#tenth {
+    color: #2f8fd9;
+}
+
+
+p {
+    width: 600px;
+    font-family: "elza", sans-serif;
+    font-weight: 700;
+    color: #383732;
+    padding: 40px;
+    line-height: 1.4em;
+
+}
+
+button {
+    font-family: "elza", sans-serif;
+    font-weight: 700;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    padding: 12px;
+    color: white;
+    background-color: #ff7300;
+    border: 5px #ff8a2a outset;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
