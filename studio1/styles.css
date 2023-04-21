@@ -1,0 +1,83 @@
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Judson', serif;
+    font-style: italic;
+    font-weight: 200;
+    color: white;
+    background-color: black;
+}
+
+.fa-expand {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 36px;
+    color: white;
+}
+
+.fa-expand:hover {
+    cursor: pointer;
+}
+
+#lyrics p {
+    position: absolute;
+    padding: 1em;
+    font-size: 1.6em;
+    color: white;
+    transition: all 2s;
+    text-shadow: 3px 3px 5px black;
+}
+
+#line1 {
+    bottom: 10%;
+    right: 5%;
+}
+
+#line2 {
+    bottom: 5%;
+    right: 5%;
+}
+
+#line3 {
+    bottom: 0%;
+    right: 5%;
+}
+
+
+.hidden {
+    opacity: 0;
+}
+
+.showing {
+    opacity: 1;
+}
+
+.fa-mountain-sun {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 36px;
+    transform: translate(-50%, -50%);
+    animation: mountain 2s infinite alternate ease-in-out;
+}
+
+@keyframes mountain {
+    0% {
+        opacity: .5;
+        /* transform: scale(1); */
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .5;
+    }
+}
