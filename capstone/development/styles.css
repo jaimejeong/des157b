@@ -1,0 +1,101 @@
+body {
+    background-color: #fffbfa;
+    font-family: "elza", sans-serif;
+}
+
+#container {
+    margin: auto;
+    width: 750px;
+    position: relative;
+    margin-top: 40px;
+}
+
+main {
+    background-color: #e0efff;   
+    padding: 20px 40px;
+    font-size: 17px;
+    line-height: 1.4em;
+    margin-top: 40px;
+    color: #272622;
+}
+
+h1 {
+    font-family: "gambado-sans-forte", sans-serif;
+    font-size: 36px;
+}
+
+#button {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    padding: 12px;
+    background-color: #0d00ff;
+    border: 5px #3c32ff outset;
+    font-weight: 700;
+}
+
+#button a {
+    text-decoration: none;
+    color: white;
+}
+
+/* h1 colors */
+#one {
+    color: #df5087; 
+}
+
+#two {
+    color: #4dbc92; 
+}
+
+#three {
+    color: #bfedaa; 
+}
+
+#four {
+    color: #ffaacf; 
+}
+
+#five {
+    color: #c5dffa; 
+}
+
+#six {
+    color: #08938a; 
+}
+
+#seven {
+    color: #f76663; 
+}
+
+#eight {
+    color: #157575; 
+}
+
+#nine {
+    color: #df5087; 
+}
+
+#ten {
+    color: #bfedaa;
+}
+
+#eleven {
+    color: #f1972d; 
+}
+
+#twelve {
+    color: #f7c34a; 
+}
+
+#thirteen {
+    color: #ef6c4a; 
+}
+
+#fourteen {
+    color: #b5d197; 
+}
+
+#fifteen {
+    color: #82bfff; 
+}

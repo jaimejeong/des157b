@@ -1,0 +1,36 @@
+{
+    "SUN" : {
+        "reason" : "",
+        "images" : []
+    },
+
+    "MON" : {
+        "reason" : "",
+        "images" : []
+    },
+
+    "TUE" : {
+        "reason" : "",
+        "images" : []
+    },
+
+    "WED" : {
+        "reason" : "",
+        "images" : []
+    },
+
+    "THUR" : {
+        "reason" : "",
+        "images" : []
+    },
+
+    "FRI" : {
+        "reason" : "",
+        "images" : []
+    },
+
+    "SAT" : {
+        "reason" : "",
+        "images" : []
+    }
+}
