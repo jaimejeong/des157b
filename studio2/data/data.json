@@ -1,36 +1,43 @@
 {
     "SUN" : {
-        "reason" : "",
-        "images" : []
+        "day" : "Sunday",
+        "reason" : "my vespa lego",
+        "images" : ["images/flower.jpg"]
     },
 
     "MON" : {
-        "reason" : "",
+        "day" : "Monday",
+        "reason" : "the tulip i got for myself",
         "images" : []
     },
 
     "TUE" : {
-        "reason" : "",
-        "images" : []
+        "day" : "Tuesday",
+        "reason" : "yummy food with friends",
+        "images" : ["images/flower.jpg"]
     },
 
     "WED" : {
-        "reason" : "",
+        "day" : "Wednesday",
+        "reason" : "the blue sky and the green tree",
         "images" : []
     },
 
     "THUR" : {
-        "reason" : "",
+        "day" : "Thursday",
+        "reason" : "my birthday",
         "images" : []
     },
 
     "FRI" : {
-        "reason" : "",
+        "day" : "Friday",
+        "reason" : "the sheeps on campus",
         "images" : []
     },
 
     "SAT" : {
-        "reason" : "",
+        "day" : "Saturday",
+        "reason" : "my new glasses",
         "images" : []
     }
 }

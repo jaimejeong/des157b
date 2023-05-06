@@ -1,27 +1,115 @@
+body {
+    background-color: #eaf4e2;
+    /* background-color: aliceblue; */
+    /* font-family: 'Calistoga', cursive; */
+    /* font-family: "gooddog-new", sans-serif;
+    font-weight: 400;
+    font-style: normal; */
+    font-family: "variex", sans-serif;
+font-weight: 200;
+font-style: normal;
+}
+
 #container {
     margin: auto;
     width: 1200px;
+    position: relative;
+}
+
+main {
+    /* font-family: 'Calistoga', cursive; */
 }
 
 h1 {
-    margin: auto;
-    width: 700px;
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    margin: 30px;
 }
 
 nav {
-    
-    /* margin: auto; */
+    margin: auto;
     width: 1000px;
 }
 
 nav ul {
     display: flex;
     list-style-type: none;
-    justify-content: center;
+    justify-content: space-around;
+    font-size: 24px;
 }
 
 button {
-    /* padding: 20px; */
+    padding: 5px 10px;
     margin: 10px;
+    color: white;
+}
 
+button:hover {
+    cursor: pointer;
+}
+
+/* days button -- color */
+#SUN {
+    background-color: #ffaacf;
+    border: 5px #ffc3dd outset;
+    color: #87053d
+}
+
+#MON {
+    background-color: #f29e31;
+    border: 5px #ffbd66 outset;
+    color: #683b00;
+}
+
+#TUE {
+    background-color: #df5087;
+    border: 5px #ff6ca4 outset;
+    color: #ffdbe9;
+}
+
+#WED {
+    background-color: #f5b95c;
+    border: 5px #ffc876 outset;
+    color: #a16400;
+}
+
+#THUR {
+    background-color: #bfedaa;
+    border: 5px #bfe4b0 outset;
+    color: #3d5631;
+}
+
+#FRI {
+    background-color: #2f8fd9;
+    border: 5px #52a1de outset;
+    color: #ecf6ff;
+}
+
+#SAT {
+    background-color: #08938a;
+    border: 5px #28b4aa outset;
+    color: #e2fffd;
+}
+
+
+
+/* back button */
+#button {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    padding: 12px;
+    background-color: #c50000;
+    border: 5px #c72020 outset;
+    font-weight: 700;
+}
+
+#button a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    width: 500px;
 }
