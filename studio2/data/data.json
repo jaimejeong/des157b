@@ -1,43 +1,43 @@
 {
     "SUN" : {
         "day" : "Sunday",
-        "reason" : "my vespa lego",
-        "images" : ["images/flower.jpg"]
+        "reason" : "of the pretty flowers",
+        "images" : ["images/flower.png"]
     },
 
     "MON" : {
         "day" : "Monday",
-        "reason" : "the tulip i got for myself",
-        "images" : []
+        "reason" : "of this 3d printed octopus",
+        "images" : ["images/octopus.png"]
     },
 
     "TUE" : {
         "day" : "Tuesday",
-        "reason" : "yummy food with friends",
-        "images" : ["images/flower.jpg"]
+        "reason" : "of the sheeps on campus",
+        "images" : ["images/sheep.png"]
     },
 
     "WED" : {
         "day" : "Wednesday",
-        "reason" : "the blue sky and the green tree",
-        "images" : []
+        "reason" : "I picked up my first glazed cup",
+        "images" : ["images/cup.png"]
     },
 
     "THUR" : {
         "day" : "Thursday",
-        "reason" : "my birthday",
-        "images" : []
+        "reason" : "it was my birthday",
+        "images" : ["images/birthday.png"]
     },
 
     "FRI" : {
         "day" : "Friday",
-        "reason" : "the sheeps on campus",
-        "images" : []
+        "reason" : "I hung out with my friend, Sam",
+        "images" : ["images/sam.png"]
     },
 
     "SAT" : {
         "day" : "Saturday",
-        "reason" : "my new glasses",
-        "images" : []
+        "reason" : "of my new glasses",
+        "images" : ["images/glasses.png"]
     }
 }

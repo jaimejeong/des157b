@@ -36,7 +36,7 @@ function updateInterface(value, jsonData) {
     console.log(value);
     let text = '<p>';
     let imgs = '';
-    text += `On ${jsonData[value].day}, I was happy because of ${jsonData[value].reason}`;
+    text += `On <b>${jsonData[value].day}</b>,<br> I was happy because ${jsonData[value].reason}`;
     text += '</p>';
     // if (jsonData[value].hasOwnProperty('images')) {
         for (let i = 0; i < jsonData[value].images.length; i++) {

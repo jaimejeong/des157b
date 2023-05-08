@@ -1,13 +1,6 @@
 body {
-    background-color: #eaf4e2;
-    /* background-color: aliceblue; */
-    /* font-family: 'Calistoga', cursive; */
-    /* font-family: "gooddog-new", sans-serif;
-    font-weight: 400;
-    font-style: normal; */
     font-family: "variex", sans-serif;
-font-weight: 200;
-font-style: normal;
+    background-color: #eaf4e2;
 }
 
 #container {
@@ -17,13 +10,20 @@ font-style: normal;
 }
 
 main {
-    /* font-family: 'Calistoga', cursive; */
+    display: flex;
+    width: 900px;
+    margin: auto;
+}
+
+#result {
+    justify-content: center;
+    margin: auto;
 }
 
 h1 {
     text-align: center;
     font-size: 40px;
-    color: black;
+    color: #022200;
     margin: 30px;
 }
 
@@ -51,58 +51,55 @@ button:hover {
 
 /* days button -- color */
 #SUN {
-    background-color: #ffaacf;
-    border: 5px #ffc3dd outset;
-    color: #87053d
-}
-
-#MON {
-    background-color: #f29e31;
-    border: 5px #ffbd66 outset;
-    color: #683b00;
-}
-
-#TUE {
     background-color: #df5087;
     border: 5px #ff6ca4 outset;
     color: #ffdbe9;
 }
 
-#WED {
-    background-color: #f5b95c;
-    border: 5px #ffc876 outset;
-    color: #a16400;
+#MON {
+    background-color: #2f8fd9;
+    border: 5px #52a1de outset;
+    color: white;
 }
 
-#THUR {
-    background-color: #bfedaa;
-    border: 5px #bfe4b0 outset;
+#TUE {
+    background-color: #c9edaa;
+    border: 5px #c8e4b0 outset;
     color: #3d5631;
 }
 
+#WED {
+    background-color: #9936a6;
+    border: 5px #ae49bc outset;
+    color: #fbe1fe;
+}
+
+#THUR {
+    background-color: #ffb400;
+    border: 5px #ffbe27 outset;
+    color: #6f4c0f;
+}
+
 #FRI {
-    background-color: #2f8fd9;
-    border: 5px #52a1de outset;
-    color: #ecf6ff;
+    background-color: #ef3740;
+    border: 5px #ff4d56 outset;
+    color: white;
 }
 
 #SAT {
-    background-color: #08938a;
-    border: 5px #28b4aa outset;
-    color: #e2fffd;
+    background-color: #f35820;
+    border: 5px #fc7544 outset;
+    color: #fffaf8;
 }
-
-
 
 /* back button */
 #button {
     position: absolute;
     top: -20px;
     right: 0;
-    padding: 12px;
-    background-color: #c50000;
-    border: 5px #c72020 outset;
-    font-weight: 700;
+    background-color: #022200;
+    border: 5px #050705 outset;
+    padding: 7px 12px;
 }
 
 #button a {
@@ -112,4 +109,15 @@ button:hover {
 
 img {
     width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    color: #022200;
+    font-size: 20px;
+    text-align: center;
+    /* font-family: 'Calistoga', cursive; */
+    padding: 20px;
+    line-height: 1.4em;
 }
