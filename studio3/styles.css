@@ -1,21 +1,172 @@
-#container {
-    /* position: relative; */
-    top: 0;
-    left: 0;
-}
-
-#image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 p {
     font-family: "ccmeanwhile", sans-serif;
     position: absolute;
     font-size: 28px;
-    top: 20%;
-    left: 45%;
-    
+    top: 25%;
+    left: 50%;
+    animation: fadeIn 3s;
 }
+
+#rightArrow:hover, #rightArrow2:hover, #leftArrow:hover {
+    cursor: pointer;
+}
+
+#rightArrow {
+    height: 80px;
+    position: absolute;
+    right: 5%;
+    top: 40%;
+}
+
+#rightArrow2 {
+    height: 80px;
+    position: absolute;
+    right: 5%;
+    top: 40%;
+}
+
+#leftArrow {
+    height: 80px;
+    position: absolute;
+    left: 5%;
+    top: 40%;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+/* first overlay */
+#first {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width:1200px;
+}
+
+#face {
+    width: 325px;
+}
+
+#text p {
+    font-size: 30px;
+}
+
+/* input text */
+#name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 40px;
+    font-family: "ccmeanwhile", sans-serif;
+    border: none;
+    border-bottom: 5px solid red;
+    width: 25%;
+}
+
+/* second overlay */
+#second input {
+    font-family: "ccmeanwhile", sans-serif;
+    font-size: 32px;
+    width: 300px;
+    border: none;
+    border-bottom: 5px solid red;
+    background-color: transparent;
+}
+
+#textbubble {
+    position: absolute;
+    width: 200px;
+    bottom: 20%;
+    left: 28%;
+}
+
+#artist {
+    margin-top: 60px;
+}
+
+#student {
+    position: absolute;
+    bottom: 15%;
+    right: 25%;
+}
+
+#bubble1 {
+    position: absolute;
+    top: 15%;
+    left: 40%;
+}
+
+#bubble2 {
+    position: absolute;
+    bottom: 10%;
+    right: 40%;
+}
+
+/* third overlay */
+#third p {
+    position:static;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* walking animation */
+#sprite-image1 {
+    height: 325px;
+    width: 484px;
+    background: url(images/menwalking.svg) 0px 0px;
+    position: absolute;
+    left: 5%;
+    top: 10%;
+}
+#sprite-image2 {
+    height: 325px;
+    width: 484px;
+    background: url(images/studentwalking.svg) 0px 0px;
+    background-position:  bottom;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+}
+
+/* show and hide overlays */
+.showing {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* animation keyframes */
+@keyframes slidein {
+    from {
+      margin-left: -100%;
+    }
+    to {
+      margin-left: 0%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+  
+  
+
+  

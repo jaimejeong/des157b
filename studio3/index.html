@@ -5,19 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Liberty</title>
+
+    <!--/ /-------- Normalize CSS --------/ /-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!--/ /-------- Adobe Fonts --------/ /-->
     <link rel="stylesheet" href="https://use.typekit.net/pqc1nhc.css">
+
+    <!--/ /-------- Parse Library --------/ /-->
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <div id="container">
+        <!-- navigation of pages -->
+        <img src="images/right.png" id="rightArrow" class="showing">
+        <img src="images/right.png" id="rightArrow2" class="hidden">
+        <img src="images/left.png" id="leftArrow" class="hidden">
 
-        <div id="image">
-            <img src="images/people.svg" alt="stick figure drawings">
-        </div>
+        <!-- first overlay, ask users for their name -->
+        <section id="first" class="showing">
+            <img src="images/face2.png" id="face">
+            <img src="images/bubble.svg" id="bubble">
+            <div id="text">
+                <p>my name is ...</p>
+                <input type="text" id="name" name="name">
+            </div>
+        </section>
 
-        <p>what song are you <br>listening to?</p>
+        <!-- second overlay, ask users what song they are listening to -->
+        <section id="second" class="hidden">
+            <div id="dialogue" class="hidden">
+                <!-- <img src="images/men.svg" alt="stick figure drawings" id="men"> -->
+                <img src="images/bubble1.svg" alt="message bubble" id="bubble1">
+                <p>what song are you <br>listening to?</p>
+
+                <!-- <img src="images/student.svg" alt="student stick figure" id="student"> -->
+                <img src="images/bubble2.svg" alt="message bubble" id="bubble2">
+                <div id="textbubble">
+                    <div id="text2">
+                    <input type="text" id="song" name="song" placeholder="&quot;song name&quot;">
+                    <p>by</p>
+                    <input type="text" id="artist" name="artist" placeholder="artist name">
+                    </div>
+                </div>
+            </div>
+
+            <div id="sprite-container">
+                <div id="sprite-image1">
+                </div>
+                <div id="sprite-image2">
+                </div>
+            </div>
+        </section>
+
+        <!-- third overlay, outcome in grid -->
+        <section id="third" class="hidden">
+            <p>what is everyone listening to?</p>
+            <div id="grid-container">
+                
+            </div>
+
+        </section>
     </div>  
 </body>
 </html>
