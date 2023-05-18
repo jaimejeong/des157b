@@ -1,3 +1,7 @@
+body {
+    font-family: "ccmeanwhile", sans-serif;
+}
+
 p {
     font-family: "ccmeanwhile", sans-serif;
     position: absolute;
@@ -105,47 +109,56 @@ input[type="text"]:focus {
 }
 
 /* third overlay */
-#third p {
+#third p, h1 {
     position:static;
     text-align: center;
 }
+
+#third h1 {
+    padding-bottom: 50px;
+}
+
 .sticker {
     width: 65px;
     height: 30px;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.5);
     transform: rotate(-30deg);
     position: absolute;
-    left: 35%;
-    top: -10%;
+    left: 40%;
+    top: -7.5%;
 }
 
-.grid-container {
-    padding-top: 100px;
-    /* display: grid; */
-    columns: 3;
-    column-gap: 30px;
-    /* grid-template-columns: repeat(3, 1fr); */
-    /* column-gap */
-    width: 800px;
-    margin: auto;
-    justify-items: center;
+#macy-container {
+   width: 850px;
+   margin: auto;
+   padding-top: 50px;
 }
 
-/* grid */
-.grid-item {
-    background-color: brown;
-    width: 220px;
+/* macy */
+.macy-item {
+    background-color: rgb(254, 248, 195);
+    /* overflow: hidden; */
+    padding: 15px;
+    /* margin: 50px; */
     position: relative;
-    padding: 20px;
-    margin-bottom: 10px;
-    break-inside: avoid;
+    left: 0;
+    top: 0;
+
 }
 
-.grid-item p {
-    width: 100%;
-    /* height: */
-    object-fit: contain;
+.macy-item p {
     overflow-wrap: break-word;
+    font-family: blambot-fx-pro,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    animation: none;
+}
+
+.name {
+    color: rgb(72, 37, 0);
+    /* position: absolute;
+    right: 0px;
+    bottom: 0px; */
 }
 
 

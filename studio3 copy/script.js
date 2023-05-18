@@ -12,7 +12,8 @@ Parse.serverURL = "https://parseapi.back4app.com/";
     const secondPage = document.querySelector('#second');
     const thirdPage = document.querySelector('#third')
     const dialogue = document.querySelector('#dialogue');
-    const grid = document.querySelector('#grid')
+    const macyContainer = document.querySelector('#macy-container');
+    const macyItem = document.querySelector('.macy-item');
 
     async function displayFriends() {
         const friends = Parse.Object.extend('Friends');
@@ -23,16 +24,31 @@ Parse.serverURL = "https://parseapi.back4app.com/";
 
             results.forEach(function(eachFriend) {
                 const id = eachFriend.id;
-                const name = eachFriend.get('name');
-                const song = eachFriend.get('song');
-                const artist = eachFriend.get('artist');
+                let name = eachFriend.get('name').toLowerCase();
+                // name = name.charAt(0).toUpperCase() + name.slice(1);
+                let song = eachFriend.get('song').toLowerCase();
+                // song = song.charAt(0).toUpperCase() + song.slice(1);
+                let artist = eachFriend.get('artist').toLowerCase();
+                // artist = artist.charAt(0).toUpperCase() + artist.slice(1);
                 console.log(id, name, song, artist);
+                
 
-                const theListItem = document.createElement('li');
-                theListItem.setAttribute('id', `r-${id}`);
-                theListItem.innerHTML = `${name}, ${song}, ${artist}`
 
-                thirdPage.append(theListItem);
+  
+
+                const macyItem = document.createElement('div');
+                macyItem.setAttribute('id', `r-${id}`);
+                macyItem.setAttribute('class', 'macy-item');
+
+                // const theListItem = document.createElement('div');
+                // macyItem.setAttribute('id', `r-${id}`);
+                macyItem.innerHTML = `
+                    <div class="sticker"></div>
+                    <p>"${song}"<br> by <br>${artist}</p>
+                    <p class="name">${name}</p>
+                `;
+                // name.style.color = "blue";
+                macyContainer.append(macyItem);
             })
         }
         catch (error) {
@@ -49,6 +65,47 @@ Parse.serverURL = "https://parseapi.back4app.com/";
         firstPage.className = 'hidden'
         startAnimation();
     })
+
+    async function addFriend() {
+        const newFriend = {};
+        
+        for (let i = 0; i < inputs.length; i++) {
+            let key = inputs[i].getAttribute('name');
+            let value = inputs[i].value;
+            newFriend[key] = value;
+        }
+        if (newFriend.name != '' && newFriend.song != '' && newFriend.artist != '') {
+            const newFriendDat= new Parse.Obect('Friends');
+            newFriendData.set('name', newFriend.name);
+            newFriendData.set('song', newFriend.song);
+            newFriendData.set('artist', newFriend.artist);
+
+            try {
+                const result = await newFriendData.save();
+                macyItem.inneerHTML = '';
+                displayFriends();
+            }
+            catch (error) {
+                console.error('Error while creating friend: ', error);
+            }
+        }
+
+    }
+
+
+    async function setForm(recordId) {
+        const friends = Parse.Object.extend('Friends');
+        const query = new Parse.Query(friends);
+        query.equalTo('objectId', recordId);
+        // try {
+        //     const results = await query.find();
+        //     results.forEach(function(thisFriend) {
+        //         document.getElementById('name').value = thisFriend.get('name');
+        //         document.getElementById('')
+        //     })
+        // }
+    }
+
 
     rightArrow2.addEventListener('click', function() {
         secondPage.className = 'hidden';
@@ -104,6 +161,22 @@ Parse.serverURL = "https://parseapi.back4app.com/";
         }, speed);
     }
 
+    // macy.js
+    const macyInstance = Macy({
+        container: "#macy-container",
+        trueOrder: false,
+        waitForImages: false,
+        margin: 60,
+        columns: 3,
+        breakAt: {
+            1200: 3,
+            520: 2,
+            400: 1
+        }
+      
+    })
   
    
+
+  
 })();

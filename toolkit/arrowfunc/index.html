@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+    <style>
+        html {
+            background-color: #efefef;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            line-height: 1.4em;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Change this H1</h1>
+
+    <p>This function is used for capitalizing the first letter of each word in a string. For my Library Liberty project, I wanted to capitalize the first letter of user's name, and later I got intrigued on how to capitalize each word when there's a space between. I've used <a href="https://flexiple.com/javascript/javascript-capitalize-first-letter">this website</a> to understand and write the code. </p>
+
+    <h2>Named Function</h2>
+    <code>
+        <pre>
+            function firstUpperCase(str) {
+                str = str.toLowerCase();
+                const arr = str.split(" ");
+    
+                for (let i = 0; i < arr.length; i ++) {
+                    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+                }
+                return arr.join(" ");
+            }
+        </pre>
+    </code>
+
+    <h2>Function Expression</h2>
+    <code>
+        <pre>
+            const firstUpperCase = function(str) {
+                str = str.toLowerCase();
+                const arr = str.split(" ");
+    
+                for (let i = 0; i < arr.length; i ++) {
+                    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+                }
+                return arr.join(" ");
+            }
+        </pre>
+    </code>
+
+    <h2>Arrow Function</h2>
+    <code>
+        <pre>
+            const firstUpperCase = str => {
+                str.toLowerCase();
+                const arr = str.split(" ");
+    
+                for (let i = 0; i < arr.length; i ++) {
+                    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+                }
+                return arr.join(" ");
+            }
+        </pre>
+    </code>
+
+    <footer>Jaime Jeong</footer>
+
+    <script>
+        // function firstUpperCase(str) {
+        //     str = str.toLowerCase();
+        //     const arr = str.split(" ");
+
+        //     for (let i = 0; i < arr.length; i ++) {
+        //         arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+        //     }
+        //     return arr.join(" ");
+            
+        // }
+        
+        // const firstUpperCase = function(str) {
+        //     str = str.toLowerCase();
+        //     const arr = str.split(" ");
+
+        //     for (let i = 0; i < arr.length; i ++) {
+        //         arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+        //     }
+        //     return arr.join(" ");
+        // }
+
+        const firstUpperCase = str => {
+            str.toLowerCase();
+            const arr = str.split(" ");
+
+            for (let i = 0; i < arr.length; i ++) {
+                arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+            }
+            return arr.join(" ");
+        }
+
+        console.log(firstUpperCase('jaime jeong'));
+
+
+
+        // script from Bill's video
+
+        // function makeUpperCase(astring) {
+        //     return aString.toUpperCase();
+        // }
+
+        // const makeUpperCase = function(aString) {
+        //     return aString.toUpperCase();
+        // }
+
+        // const makeUpperCase = aString => {
+        //     return aString.toUpperCase();
+        // }
+
+        // const makeUpperCase = aString => aString.toUpperCase();
+        // console.log(makeUpperCase('some string'));
+
+        // const fullName = (fname, lname) => `${fname} ${lname}`;
+        // console.log(fullName('Sarah', 'Jones'));
+
+        // const fullName = () => {
+        //     const fname = 'Maria';
+        //     const lname = 'Sanchez';
+        //     return `${fname} ${lname}`;
+        // }
+        // console.log(fullName());
+
+        // const fruit = ['banana', 'apple', 'lemon', 'kiwi'];
+        // const upperFruit = [];
+
+        // // fruit.forEach(function(thisFruit) {
+        // //     upperFruit.push(thisFruit.toUpperCase());
+        // // });
+        // fruit.forEach(thisFruit => {
+        //     upperFruit.push(thisFruit.toUpperCase());
+        // });
+        // console.log(upperFruit);
+
+        // const employee = function(fname, lname, jobTitle) {
+        //     this.fname = fname;
+        //     this.lname = lname;
+        //     this.position = jobTitle;
+        //     this.fullName = function() {
+        //         return `${fname} ${lname}`;
+        //     }
+        // }
+
+        // const employee = function(fname, lname, jobTitle) {
+        //     this.fname = fname;
+        //     this.lname = lname;
+        //     this.position = jobTitle;
+        //     this.fullName = () => `${fname} ${lname}`;
+        // }
+
+        // const id1234 = new employee('Bob', 'Smith', 'Mechanic');
+        // console.log(id1234.fname);
+        // console.log(id1234.fullName());
+
+
+    </script>
+    
+</body>
+</html>
