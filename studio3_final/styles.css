@@ -40,6 +40,27 @@ input[type="text"]:focus {
     outline: none;
 }
 
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: flex-end;
+    position: absolute;
+    bottom: 1%;
+    width: 100%;
+}
+
+footer p {
+    position: static;
+    font-family: blambot-fx-pro,sans-serif;
+    font-size: 20px;
+    animation: none;
+}
+
+footer p a {
+    text-decoration: none;
+    color: grey;
+}
+
 /* first overlay */
 #first {
     position: absolute;
@@ -156,20 +177,7 @@ input[type="text"]:focus {
 
 .name {
     color: rgb(72, 37, 0);
-    /* position: absolute;
-    right: 0px;
-    bottom: 0px; */
 }
-
-
-
-
-
-
-
-
-
-
 
 /* walking animation */
 #sprite-image1 {
@@ -216,8 +224,4 @@ input[type="text"]:focus {
     100% {
         opacity: 1;
     }
-}
-  
-  
-
-  
+} 
