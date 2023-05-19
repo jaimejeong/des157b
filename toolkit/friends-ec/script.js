@@ -145,6 +145,7 @@ Parse.serverURL = "https://parseapi.back4app.com/";
     });
 
     // ******* what is this function for??? *******
+    // putting the text in when they want to edit?
     async function setForm(recordId) {
         const friends = Parse.Object.extend('Friends');
         const query = new Parse.Query(friends);

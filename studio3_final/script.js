@@ -7,21 +7,21 @@ Parse.serverURL = "https://parseapi.back4app.com/";
 
     const rightArrow = document.querySelector('#rightArrow');
     const rightArrow2 = document.querySelector('#rightArrow2');
-    const leftArrow = document.querySelector('#leftArrow');
+    // const leftArrow = document.querySelector('#leftArrow');
     const firstPage = document.querySelector('#first');
     const secondPage = document.querySelector('#second');
     const thirdPage = document.querySelector('#third')
     const dialogue = document.querySelector('#dialogue');
+    const inputs = document.querySelectorAll('input:not([type=submit]');
     const macyContainer = document.querySelector('#macy-container');
     const macyItem = document.querySelector('.macy-item');
-
+    let thisRecord;
+ 
     async function displayFriends() {
         const friends = Parse.Object.extend('Friends');
         const query = new Parse.Query(friends);
         try {
-            const results = await query.ascending('lname').find();
-            console.log(results);
-
+            const results = await query.find();
             results.forEach(function(eachFriend) {
                 const id = eachFriend.id;
                 let name = eachFriend.get('name').toLowerCase();
@@ -31,40 +31,23 @@ Parse.serverURL = "https://parseapi.back4app.com/";
                 let artist = eachFriend.get('artist').toLowerCase();
                 // artist = artist.charAt(0).toUpperCase() + artist.slice(1);
                 console.log(id, name, song, artist);
-                
-
-
-  
 
                 const macyItem = document.createElement('div');
                 macyItem.setAttribute('id', `r-${id}`);
                 macyItem.setAttribute('class', 'macy-item');
-
-                // const theListItem = document.createElement('div');
-                // macyItem.setAttribute('id', `r-${id}`);
                 macyItem.innerHTML = `
                     <div class="sticker"></div>
                     <p>"${song}"<br> by <br>${artist}</p>
                     <p class="name">${name}</p>
                 `;
-                // name.style.color = "blue";
                 macyContainer.append(macyItem);
+                macyContainer.insertBefore(macyItem, macyContainer.firstChild)
             })
         }
         catch (error) {
             console.error('Error while fetching Friends', error);
         }
     }
-    displayFriends();
-
-    rightArrow.addEventListener('click', function() {
-        secondPage.className = 'showing';
-        rightArrow.className = 'hidden';
-        rightArrow2.className = 'shwoing';
-        leftArrow.className = 'showing';
-        firstPage.className = 'hidden'
-        startAnimation();
-    })
 
     async function addFriend() {
         const newFriend = {};
@@ -75,60 +58,90 @@ Parse.serverURL = "https://parseapi.back4app.com/";
             newFriend[key] = value;
         }
         if (newFriend.name != '' && newFriend.song != '' && newFriend.artist != '') {
-            const newFriendDat= new Parse.Obect('Friends');
+            const newFriendData= new Parse.Object('Friends');
             newFriendData.set('name', newFriend.name);
             newFriendData.set('song', newFriend.song);
             newFriendData.set('artist', newFriend.artist);
 
             try {
                 const result = await newFriendData.save();
-                macyItem.inneerHTML = '';
+                // macyItem.inneerHTML = '';
+                resetFormFields();
                 displayFriends();
             }
             catch (error) {
                 console.error('Error while creating friend: ', error);
             }
         }
-
+        else {
+            displayFriends();
+        }
     }
 
-
+    // not sure if this function is needed
     async function setForm(recordId) {
         const friends = Parse.Object.extend('Friends');
         const query = new Parse.Query(friends);
         query.equalTo('objectId', recordId);
-        // try {
-        //     const results = await query.find();
-        //     results.forEach(function(thisFriend) {
-        //         document.getElementById('name').value = thisFriend.get('name');
-        //         document.getElementById('')
-        //     })
-        // }
+        try {
+            const results = await query.find();
+            results.forEach(function(thisFriend) {
+                document.getElementById('name').value = thisFriend.get('name');
+                document.getElementById('song').value = thisFriend.get('song');
+                document.getElementById('artist').value = thisFriend.get('artist');
+            })
+        }
+        catch (error) {
+            console.error('Error while fetching Friends', error);
+        }
     }
 
+    rightArrow.addEventListener('click', function() {
+        secondPage.className = 'showing';
+        rightArrow.className = 'hidden';
+        rightArrow2.className = 'showing';
+        // leftArrow.className = 'showing';
+        firstPage.className = 'hidden'
+        startAnimation();
+    })
 
-    rightArrow2.addEventListener('click', function() {
+    rightArrow2.addEventListener('click', function(event) {
+        event.preventDefault();
         secondPage.className = 'hidden';
         thirdPage.className = 'showing';
-        leftArrow.className = 'hidden';
+        // leftArrow.className = 'hidden';
         rightArrow2.className = 'hidden';
         // assign position number greater than 5808
         position = 6000;
         dialogue.className = 'hidden';  
+
+        thisRecord = event.target.getAttribute('id').slice(2);
+        setForm(thisRecord);
+        addFriend();
     })
 
-    leftArrow.addEventListener('click', function() {
-
+    // when enter key pressed, move on to the next page
+    document.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            if (firstPage.className == 'showing') {
+                rightArrow.click();
+            }
+            else if (secondPage.className == 'showing') {
+                rightArrow2.click();
+            }
+        }
     })
 
+    // leftArrow.addEventListener('click', function() {
+        // add to go back to the first page with information saved
+    // })
 
-
-
-
-
-
-
-
+    function resetFormFields() {
+        document.getElementById('name').value = '';
+        document.getElementById('song').value = '';
+        document.getElementById('artist').value = '';
+    }
 
     //sprite css
 
@@ -142,7 +155,6 @@ Parse.serverURL = "https://parseapi.back4app.com/";
 
     function startAnimation() {
         const speed = 200; //in millisecond(ms)
-
         animationInterval = setInterval(function () {
             spriteSheet1.style.backgroundPositionX = `-${position}px`;
             spriteSheet2.style.backgroundPositionX = `-${position}px`;
@@ -172,11 +184,7 @@ Parse.serverURL = "https://parseapi.back4app.com/";
             1200: 3,
             520: 2,
             400: 1
-        }
-      
+        } 
     })
-  
-   
 
-  
 })();
