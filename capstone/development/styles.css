@@ -124,3 +124,7 @@ img {
     width: 400px;
     height: 100%;
 }
+
+#thumbnail {
+    width: 660px;
+}
