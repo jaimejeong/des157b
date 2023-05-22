@@ -42,6 +42,10 @@ Parse.serverURL = "https://parseapi.back4app.com/";
                 `;
                 macyContainer.append(macyItem);
                 macyContainer.insertBefore(macyItem, macyContainer.firstChild)
+                
+                /*macyInstance.recalculate(true) method is called to recalculate the layout of the macyContainer after the new items are added. This ensures that the CSS styles are properly applied to the newly added items.*/
+
+                macyInstance.recalculate(true);     
             })
         }
         catch (error) {
