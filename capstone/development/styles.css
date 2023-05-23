@@ -132,3 +132,26 @@ img {
 .flow img{
     width: 800px;
 }
+
+#feature {
+    color: #df5087;
+}
+
+#skill {
+    color: #08938a;
+    padding-top: 15px;
+}
+
+#report p {
+    line-height: 1.4em;
+    margin: 5px;
+}
+
+ol li{
+    padding-top: 14px;
+}
+
+ul li {
+    line-height: 1.6em;
+    list-style-type: square;
+}
