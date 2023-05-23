@@ -128,3 +128,7 @@ img {
 #thumbnail {
     width: 660px;
 }
+
+.flow img{
+    width: 800px;
+}
