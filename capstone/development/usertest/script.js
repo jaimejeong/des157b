@@ -10,6 +10,8 @@
     const firstbottom = document.querySelector('#firstbottom');
     const secondbottom = document.querySelector('#secondbottom');
 
+    alert("Hi, thank you for participating in user testing!\n\nHere are the 3 tasks I would like you to perform:\n1. Find 3 panels on the seal that are clickable\n2. Click and close each overlay\n3. Scroll down and move to the next slide")
+
     for (const area of areas) {
         area.addEventListener('click', function(event) {
             event.preventDefault();
