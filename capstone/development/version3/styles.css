@@ -1,0 +1,180 @@
+body {
+    font-family: 'Geologica', sans-serif;
+    /* background-color: rgb(0, 122, 229); */
+    background-color: rgb(10, 15, 36);
+    color: white;
+}
+
+main {
+    /* background-color: #FFEAB2; */
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    /* font-family: "littlebit-dotty-variable", sans-serif;
+    font-variation-settings: "DOTS" 100; */
+    font-family: "bely-display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+#image {
+    position: relative;
+    width: 700px;
+    margin: auto;
+    /* border-radius: 50%;
+    border: 20px  */
+}
+
+#circleglow {
+    position: absolute;
+    border: 50px solid white;
+    border-radius: 50%;
+    /* animation: glow 3s ease-in-out infinite alternate; */
+    box-shadow: 0 0 60px white;
+    width: 550px;
+    height: 550px;
+    top: 3.5%;
+    left: 3%;
+    z-index: -1;
+    
+}
+
+#sealimg {
+    width: 700px;
+    /* border: 2px solid black; */
+    border-radius: 50%; 
+}
+
+#thong_th {
+    position: absolute;
+    width: 180px;
+    right: 10%;
+    bottom: 30%;
+    transition: transform 0.7s;
+}
+
+#thong_th:hover {
+    transform: scale(2) rotate(75deg);
+}
+
+article {
+    position: relative;
+}
+
+#thong_article {
+    background-color: white;
+    /* border: 3px solid blue; */
+    border-radius: 10px;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: 0;
+    bottom: 35px;
+}
+
+#girl_article {
+    background-color: white;
+    /* border: 3px solid red; */
+    border-radius: 10px;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: 0;
+    top: 80px;
+}
+
+#farmer_article {
+    background-color: white;
+    /* border: 3px solid green; */
+    border-radius: 10px;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 0;
+    top: 80px;
+}
+
+.fa-circle-xmark {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #584D3D;
+    font-size: 27px;
+}
+
+.bottom {
+    margin: 300px 0 150px 0;
+    height: 600px;
+}
+
+#bottomsec  {
+    position: relative;
+}
+#firstbottom {
+    background-color: #EF7B45;
+    display: flex;
+}
+
+#secondbottom {
+    background-color: #5C946E;
+    position: absolute;
+    bottom: -150px;
+    width: 100%;
+}
+
+#rightdiv {
+    width: 50%;
+    position: relative;
+}
+
+#rightdiv p {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    font-size: 32px;
+    text-align: center;
+}
+
+#rightdiv i {
+    position: absolute;
+    font-size: 40px;
+    right: 50px;
+    top: 45%;
+}
+
+#leftdiv {
+    border-right: 5px dashed white;
+    width: 50%;
+}
+
+input[type=text] {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    right: 10%;
+    top: 8%;
+
+}
+
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 0px white;
+    }
+    to {
+        box-shadow: 0 0 50px white;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.showing {
+   visibility: visible;
+}

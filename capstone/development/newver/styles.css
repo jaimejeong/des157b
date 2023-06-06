@@ -1,0 +1,47 @@
+body {
+    background-image: url("images/gradientbg.png");
+    font-family: "loos-normal", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+#beginning {
+    width: 860px;
+    margin: auto;
+}
+
+#paragraph {
+    width: 700px;
+    background: #FFFFFFCC;
+    padding: 40px 80px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px 0px #00000040;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: "littlebit-dotty-variable",sans-serif;
+    font-variation-settings: 'DOTS' 150;
+    color: white;
+    line-height: 40px;
+
+}
+
+p {
+    font-size: 24px;
+}
+
+#btn {
+    width: 100px;
+    margin: auto;
+    
+}
+
+button {
+    color: white;
+    padding: 10px 20px;
+    background-color: #3462E7EB;
+    border-radius: 45px;
+}
