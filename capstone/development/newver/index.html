@@ -4,26 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dive In</title>
+    <title>EmbraceDavis</title>
+    <!--/ /-------- Normalize CSS --------/ /-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <!--/ /-------- Font Awesome --------/ /-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--/ /-------- Adobe Fonts--------/ /-->
     <link rel="stylesheet" href="https://use.typekit.net/pqc1nhc.css">
+    <!--/ /-------- Google Fonts --------/ /-->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+     <!--/ /-------- Parse Library --------/ /-->
+     <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+     <!--/ /-------- Macy Library --------/ /-->
+     <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <section id="beginning">
-        <h1>DIVE IN<br>[DIVERSITY & INCLUSIVITY]</h1>
+    <div id="beginning" class="showing">
+        <h1><br>EmbraceDavis</h1>
+        <section id="section1" class="overlay showing">
+            <p>The Davis Centennial Seal features stories about the Davis community and symbolizes its history and development throughout the centuries by exploring themes that connect us to our past, including stories of marginalized communities.</p>
+            <p>One of the panels illustrates the Thong Hy Huynh Award, an award to raise awareness and honor Thong Hy Huynh, a Davis High School student who was stabbed to death in a racially motivated attack on May 4, 1983.</p>
+            <p>To learn more about the seal, click <a href='https://www.cityofdavis.org/city-hall/city-manager-s-office/arts-culture/davis-centennial-seal' target="_blank">here.</a href></p>
 
-        <div id="paragraph">
-            <p>The Davis Centennial Seal represents Davis in a multi-faceted way and shares story about Davis community.</p>
-            <p>Few of the panels on the seal includes symbols of marginalization in the past.</p>
-            <p>This site serves to invite visitors to connect that past to the present with their own stories and the future as we image a more inclusive place together.</p>
-            <p>Now, let’s dive into anonymous chat with us!</p>
-            <div id="btn">
-                <button>continue</button>
-            </div>
+            <div id="bottom">
+                <div id="dots">
+                    <span class="darkdot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="btn">
+                    <button id="button1">next</button>
+                </div>
         </div>
-    </section>
+        </section>
+
+        <section id="section2" class="overlay hidden">
+            <P>EmbraceDavis is a platform that encourages the community to come together, acknowledge and appreciate their differences, and create an environment where everyone feels welcome and valued.</P>
+            
+            <p>We would love to hear about your personal experience with inclusivity in Davis. Click share to write or view to see other people’s responses in the community.</p>
+
+            <p>All responses provided will remain anonymous.</p>
+
+            <div id="bottom2">
+                <div id="dots2">
+                    <span class="dot"></span>
+                    <span class="darkdot"></span>
+                </div>
+                <div class="btn">
+                    <button id="button2">share</button>
+                    <button id="button3">view</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="section3" class="overlay hidden">
+            <p>How would you describe your overall experience with inclusivity in Davis?</p>
+            <div class="text">
+                <!-- <input type="text" id="improvement"> -->
+                <textarea placeholder="type..." id="experience" name="experience"></textarea>
+            </div>
+            <div class="btn2">
+                <button id="button4">next</button>
+            </div>
+        </section>
+
+        <section id="section4" class="overlay hidden">
+            <p>How can Davis create a more inclusive environment for everyone?</p>
+            <div class="text">
+                <!-- <input type="text" id="improvement"> -->
+                <textarea placeholder="type..." id="improvement" name="improvement"></textarea>
+            </div>
+            <div class="btn2">
+                <button id="button5">submit</button>
+            </div>
+        </section>
+
+    </div>
+
+    <div id="response" class="hidden">
+        <h1>EmbraceDavis</h1>
+        <div id="macy-container"></div>
+        <button id="homebtn">
+        <i class="fa-solid fa-house"></i>home</button>
+    </div>  
     
 </body>
 </html>
