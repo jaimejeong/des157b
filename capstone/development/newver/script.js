@@ -18,7 +18,6 @@ Parse.serverURL = "https://parseapi.back4app.com/";
     const section3 = document.querySelector('#section3');
     const section4 = document.querySelector('#section4');
 
-
     const beginning = document.querySelector('#beginning');
     const response = document.querySelector('#response');
 
@@ -46,7 +45,6 @@ Parse.serverURL = "https://parseapi.back4app.com/";
         section2.className = 'overlay hidden';
         response.className = 'showing';
         beginning.className = 'hidden';
-        // section5.className = 'overlay showing';
 
         document.body.style.backgroundColor = '#000438';
         thisRecord = event.target.getAttribute('id').slice(2);
@@ -65,7 +63,6 @@ Parse.serverURL = "https://parseapi.back4app.com/";
         section4.className = 'overlay hidden';
         response.className = 'showing';
         beginning.className = 'hidden';
-        // section5.className = 'overlay showing';
 
         document.body.style.backgroundColor = '#000438';
         thisRecord = event.target.getAttribute('id').slice(2);
